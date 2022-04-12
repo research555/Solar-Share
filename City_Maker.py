@@ -24,10 +24,6 @@ geo_key = "0564512562944fa1b9a12b658169b564" # From OpenCage API
 geocoder = OpenCageGeocode(geo_key)
 query = 'Oslo'
 results = geocoder.geocode(query)
-print(results[0]['geometry']['lng'])
-
-
-
 
 city_lat = []
 city_lng = []
@@ -38,7 +34,7 @@ for city in cities:
     city_lat.append(results[0]['geometry']['lat'])
     city_lng.append(results[0]['geometry']['lng'])
     i += 1
-    print(i)
+    print(i)    # Always good with some feedback
 
 rows = zip(city_lat, city_lng, cities)
 new_csv_path = "C:/Users/Dr. Imran Nooraddin/PycharmProjects/SolarShare/lat_lng.csv"
