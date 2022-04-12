@@ -11,6 +11,7 @@ m = folium.Map(location=[20, 0], tiles="OpenStreetMap", zoom_start=2)
 
 for i in range(0, len(data)):
    folium.Marker(
+      icon=folium.Icon(icon='sun-bright', prefix='fa'),
       location=[data.iloc[i]['lat'], data.iloc[i]['lng']],
       popup=data.iloc[i]['city'],
    ).add_to(m)
