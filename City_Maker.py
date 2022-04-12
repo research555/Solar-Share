@@ -19,11 +19,8 @@ cities = []
 for index, row in data.iterrows():
     cities.append(row['City'])      # Appends all cities from df to a new list
 
-
 geo_key = "0564512562944fa1b9a12b658169b564" # From OpenCage API
 geocoder = OpenCageGeocode(geo_key)
-query = 'Oslo'
-results = geocoder.geocode(query)
 
 city_lat = []
 city_lng = []
